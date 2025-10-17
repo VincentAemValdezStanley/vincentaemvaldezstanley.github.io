@@ -1,0 +1,191 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Contact — Vincent Aem Valdez‑Stanley</title>
+  <meta name="description" content="Contact Vincent Aem Valdez‑Stanley for Excel/VBA automation and accounting operations projects." />
+  <style>
+    :root{ --bg:#0f1115; --panel:#141820; --muted:#97a0af; --text:#e7e9ee; --accent:#6ee7ff; --border:#222737; }
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{margin:0; background:var(--bg); color:var(--text); font:16px/1.6 system-ui,-apple-system,Segoe UI,Roboto,Inter,Helvetica,Arial,sans-serif}
+    a{color:var(--accent)} a:hover{text-decoration:underline}
+
+    .site{position:sticky; top:0; z-index:50; backdrop-filter:saturate(1.1) blur(6px); background:linear-gradient(180deg, rgba(15,17,21,.96), rgba(15,17,21,.78)); border-bottom:1px solid var(--border)}
+    .wrap{max-width:900px; margin:0 auto; padding:10px 16px}
+    .row{display:flex; align-items:center; justify-content:space-between; gap:10px; flex-wrap:wrap}
+    .left{display:flex; align-items:center; gap:10px}
+    .avatar{width:28px; height:28px; border-radius:6px; background-size:cover; background-position:center; border:1px solid var(--border); background-image:url('my-photo.jpg')}
+    .title{font-weight:700; font-size:15px; margin:0}
+    .subtitle{margin:0; font-size:10.5px; color:var(--muted)}
+    .nav{display:inline-flex; gap:.6rem; background:#0a0a0a; border:1px solid #222; padding:4px 8px; border-radius:8px}
+    .nav a{color:#ddd; font-weight:600; font-size:.82rem}
+    .nav .active{color:#fff; text-decoration:underline}
+
+    main{max-width:900px; margin:24px auto 60px; padding:0 16px}
+    .grid{display:grid; grid-template-columns:1.2fr .8fr; gap:18px}
+    @media (max-width:760px){ .grid{grid-template-columns:1fr} }
+
+    .card{background:var(--panel); border:1px solid var(--border); border-radius:12px; padding:16px}
+    h1{margin:.2rem 0 .5rem}
+    .muted{color:var(--muted)}
+
+    label{display:block; font-weight:600; margin:.6rem 0 .25rem}
+    input, select, textarea{width:100%; background:#0d1117; color:var(--text); border:1px solid var(--border); border-radius:10px; padding:10px; font-size:15px}
+    textarea{min-height:140px; resize:vertical}
+    .row2{display:grid; grid-template-columns:1fr 1fr; gap:12px}
+    @media (max-width:560px){ .row2{grid-template-columns:1fr} }
+
+    .actions{display:flex; gap:10px; flex-wrap:wrap; margin-top:12px}
+    .btn{background:#1d2230; border:1px solid var(--border); color:var(--text); padding:10px 14px; border-radius:10px; font-size:15px; cursor:pointer}
+    .btn:hover{border-color:#3a4360}
+    .btn--alt{background:transparent}
+    .small{font-size:13px}
+  </style>
+</head>
+<body>
+  <header class="site">
+    <div class="wrap">
+      <div class="row">
+        <div class="left">
+          <div class="avatar" aria-hidden="true"></div>
+          <div>
+            <p class="title">Vincent Aem Valdez‑Stanley</p>
+            <p class="subtitle">Contact — Let's make accounting easier</p>
+          </div>
+        </div>
+        <nav class="nav" aria-label="Primary">
+          <a href="index.html">Home</a>
+          <a href="projects.html">Projects</a>
+          <a href="services.html">Services</a>
+          <a class="active" href="contact.html" aria-current="page">Contact</a>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <div class="grid">
+      <section class="card">
+        <h1>Start a conversation</h1>
+        <p class="muted">Tell me briefly what you need. You'll review a proposal before any work begins.</p>
+        <form id="contactForm" novalidate>
+          <div class="row2">
+            <div>
+              <label for="name">Your name</label>
+              <input id="name" name="name" autocomplete="name" required />
+            </div>
+            <div>
+              <label for="email">Email</label>
+              <input id="email" name="email" type="email" autocomplete="email" required />
+            </div>
+          </div>
+          <div class="row2">
+            <div>
+              <label for="company">Company (optional)</label>
+              <input id="company" name="company" autocomplete="organization" />
+            </div>
+            <div>
+              <label for="role">Role (optional)</label>
+              <input id="role" name="role" />
+            </div>
+          </div>
+          <div class="row2">
+            <div>
+              <label for="service">What do you need?</label>
+              <select id="service" name="service" required>
+                <option value="" disabled selected>Select one</option>
+                <option>Process Assessment & Proposal</option>
+                <option>Process Standardization (SOP) & Documentation</option>
+                <option>Template Creation</option>
+                <option>Excel/VBA Automation</option>
+                <option>Automation‑as‑a‑Service</option>
+                <option>SQL / Access Solutions</option>
+                <option>Training & Handoff</option>
+                <option>Support & Maintenance</option>
+                <option>Other</option>
+              </select>
+            </div>
+            <div>
+              <label for="timeline">Timeline</label>
+              <select id="timeline" name="timeline" required>
+                <option value="" disabled selected>Select one</option>
+                <option>ASAP (rush)</option>
+                <option>1–2 weeks</option>
+                <option>3–4 weeks</option>
+                <option>Flexible / exploring</option>
+              </select>
+            </div>
+          </div>
+          <div class="row2">
+            <div>
+              <label for="budget">Budget (rough)</label>
+              <select id="budget" name="budget" required>
+                <option value="" disabled selected>Select one</option>
+                <option>$250–$600</option>
+                <option>$600–$1,200</option>
+                <option>$1,200–$3,500</option>
+                <option>$3,500–$8,000+</option>
+                <option>Monthly retainer</option>
+              </select>
+            </div>
+            <div>
+              <label for="ref">How did you find me? (optional)</label>
+              <input id="ref" name="ref" />
+            </div>
+          </div>
+
+          <label for="msg">Brief project description</label>
+          <textarea id="msg" name="msg" placeholder="What problem are we solving? What files/systems are involved?" required></textarea>
+
+          <div class="actions">
+            <button class="btn" type="submit">Send via Email</button>
+            <a class="btn btn--alt" href="mailto:vavstanley@pm.me" title="Open your email client">Or email: vavstanley@pm.me</a>
+          </div>
+          <p class="small muted">No backend needed — the button opens your email app with a pre‑filled message. If it doesn’t, use the direct email link.</p>
+        </form>
+      </section>
+
+      <aside class="card">
+        <h2>What to include</h2>
+        <ul>
+          <li>One sentence on the outcome you want</li>
+          <li>Sample files (if permissible) or screenshots</li>
+          <li>Your team’s toolset (Excel version, Access/SQL, etc.)</li>
+          <li>Deadline and any compliance constraints</li>
+        </ul>
+        <h2>Office</h2>
+        <p class="muted">Remote‑friendly. Eastern Time (US).</p>
+      </aside>
+    </div>
+  </main>
+
+  <script>
+    const form = document.getElementById('contactForm');
+    form.addEventListener('submit', (e)=>{
+      e.preventDefault();
+      const data = Object.fromEntries(new FormData(form).entries());
+      // Simple validation
+      if(!data.name || !data.email || !data.service || !data.timeline || !data.budget || !data.msg){
+        alert('Please complete the required fields.');
+        return;
+      }
+      const subject = encodeURIComponent(`Website inquiry: ${data.name} — ${data.service}`);
+      const body = encodeURIComponent(
+        `Name: ${data.name}\n`+
+        `Email: ${data.email}\n`+
+        (data.company?`Company: ${data.company}\n`:'')+
+        (data.role?`Role: ${data.role}\n`:'')+
+        `Service: ${data.service}\n`+
+        `Timeline: ${data.timeline}\n`+
+        `Budget: ${data.budget}\n`+
+        (data.ref?`Referral: ${data.ref}\n`:'')+
+        `\nMessage:\n${data.msg}\n`
+      );
+      const mailto = `mailto:vavstanley@pm.me?subject=${subject}&body=${body}`;
+      window.location.href = mailto;
+    });
+  </script>
+</body>
+</html>
